@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fliping Cards</title>
+</head>
+<style>
+    .parent,.child1,.child2{
+        width: 200px;
+        height: 200px;
+        font-size: 30px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 200px;
+    }
+    .parent{
+        margin: 100px auto;
+        transition-property: all;
+        transition-duration: 3s;
+        transform-style:preserve-3d
+    }
+    .parent:hover{
+        transform:perspective(200px) rotateY(180deg);
+    }
+    .child1{
+        background-color: red;
+        color: white;
+        position: absolute;
+        backface-visibility: hidden;
+        z-index: 1;
+    }
+    .child2{
+        border: 1px solid red;
+        box-sizing: border-box;
+        color: red;
+        transform:rotateY(180deg);
+    }
+</style>
+<body>
+    <div class="parent">
+        <div class="child1">Hello</div>
+        <div class="child2">ITIanes</div>
+    </div>
+</body>
+</html>

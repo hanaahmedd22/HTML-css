@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bicycle</title>
+    <style>
+        div {
+            position: relative;
+            height: 200px;
+        }
+
+        img {
+            position: absolute;
+        }
+
+        .human {
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            z-index: 2;
+            animation: humanMove 10s linear infinite;
+        }
+
+        @keyframes humanMove {
+            0% {
+                left: 0%;
+                transform: scaleX(1);
+            }
+
+            45% {
+                left: 95%;
+                transform: scaleX(1);
+            }
+
+            50% {
+                left: 95%;
+                transform: scaleX(-1);
+            }
+
+            95% {
+                left: 0%;
+                transform: scaleX(-1);
+            }
+
+            100% {
+                left: 0%;
+                transform: scaleX(1);
+            }
+        }
+
+        .ground {
+            width: 100%;
+            height: 50%;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .circle {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background-color: rgb(59, 64, 61);
+            border-radius: 50%;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            animation: rotateCircle 2s ease-in-out infinite;
+        }
+
+        @keyframes rotateCircle {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);            }
+
+            50% {
+                transform: translate(-50%, -50%) rotate(-15deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(15deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img class="ground" src="imagesTask/imagesTask/inline_image_preview.jpg" />
+        <img class="human" src="imagesTask/imagesTask/—Pngtree—cartoon characters ride bicycles_4141664.png" />
+        <div class="circle">rotate</div>
+    </div>
+</body>
+
+</html>
